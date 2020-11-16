@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>FlexBox Assignment</title>
+        <style>
+            body { padding : 2em;}
+
+            .headerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: lightblue;
+                font-weight: solid;
+                padding: 10px;
+                border: 4px solid black;
+            }
+
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: green;
+                font-weight: bold;
+                color: white;
+                padding: 10px;
+                border: 2px solid black;
+            }
+
+            .mainContainer{
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem{
+                text-align: left;
+                background: rgb(210, 244, 255);
+            }
+
+            article{
+                padding: 10px;
+                margin: 10px;
+                background: rgba(174, 122, 233, 0.199);
+                border: 5px double black;
+            }
+
+            .sideBarLeftItem{ background: rgba(28, 207, 192, 0.603);}
+            .sideBarRightItem{ background: rgba(175, 98, 137, 0.753);}
+
+            .sideBarItem{ flex: 1 0 0; border: 2px dotted black;}
+            .mainContentItem{ flex: 4 0px; order:1;}
+            .sideBarLeftItem{ order:2;}
+            .sideBarRightItem{ order:3;}
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample Flexbox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>First article</h2>
+                    <p>Bihar is the first state to go to polls in the midst of Covid-19 pandemic and that makes it a test case, for it will be as big a challenge for the voters as it will be for the candidates and political parties. What makes the challenge even bigger is the trail of destruction left behind by severe floods affecting nearly 18 districts, a battered state economy and the approaching festive season</p>
+                </article>
+                <article>
+                    <h2>Second article</h2>
+                    <p>Though there is usually talk of anti-incumbency factor after 15-year-rule by any particular leader, in Bihar, a fractured opposition does not seem fully prepared to cash in on it, while the NDA is confident of another victory under Nitish Kumar.</p>
+                </article>
+                <article>
+                    <h2>Third article</h2>
+                    <p>Education has always been a big issue in Bihar. While the ruling dispensation takes pride in a chain of national and state-level institutions, including medical colleges, engineering colleges and polytechnics, created during the NDA regime, the Opposition plays up the issues of quality and school teachers. Schools teachers continue to be unhappy despite Nitish government’s pre-poll sops to calm them down.</p>
+                </article>
+
+            </section>
+            <sidebar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sidebar>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sideBar>
+
+        </div>
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
